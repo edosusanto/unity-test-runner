@@ -49,3 +49,5 @@ echo "###########################"
 echo ""
 unity-editor \
   -buildTarget Android
+  
+unity-editor -quit
