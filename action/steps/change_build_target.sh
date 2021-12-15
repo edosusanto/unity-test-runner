@@ -48,5 +48,9 @@ echo "#   Change Build Target   #"
 echo "###########################"
 echo ""
 unity-editor \
+  -projectPath "$UNITY_PROJECT_PATH" \
   -buildTarget Android \
-  -quit
+  -quit \
+  -logFile "$FULL_ARTIFACTS_PATH/changeBuildTarget.log"
+ 
+cat "$FULL_ARTIFACTS_PATH/changeBuildTarget.log"
