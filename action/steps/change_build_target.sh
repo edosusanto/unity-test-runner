@@ -48,6 +48,5 @@ echo "#   Change Build Target   #"
 echo "###########################"
 echo ""
 unity-editor \
-  -buildTarget Android
-  
-unity-editor -quit
+  -buildTarget Android \
+  -quit
