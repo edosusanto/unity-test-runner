@@ -64,6 +64,27 @@ echo "###########################"
 echo ""
 ls -alh $UNITY_PROJECT_PATH
 
+#Change build target
+echo ""
+echo "###########################"
+echo "#   Change Build Target   #"
+echo "###########################"
+echo ""
+unity-editor \
+  -logFile "$FULL_ARTIFACTS_PATH/changeBuildTarget.log" \
+  -projectPath "$UNITY_PROJECT_PATH" \
+  -buildTarget Android \
+  -quit
+  
+# Print unity log output
+cat "$FULL_ARTIFACTS_PATH/changeBuildTarget.log"
+
+echo ""
+echo "###########################"
+echo "Change Build Target Completed"
+echo "###########################"
+echo ""
+
 #
 # Testing in EditMode
 #
