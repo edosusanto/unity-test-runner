@@ -74,6 +74,8 @@ echo ""
   -logFile "$FULL_ARTIFACTS_PATH/changeBuildTarget.log" \
   -projectPath "$UNITY_PROJECT_PATH" \
   -buildTarget Android \
+  -batchmode \
+  -nographics \
   -quit
   
 # Print unity log output
