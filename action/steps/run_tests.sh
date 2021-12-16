@@ -65,27 +65,27 @@ echo ""
 ls -alh $UNITY_PROJECT_PATH
 
 #Change build target
-echo ""
-echo "###########################"
-echo "#   Change Build Target   #"
-echo "###########################"
-echo ""
-/opt/unity/Editor/Unity \
-  -logFile "$FULL_ARTIFACTS_PATH/changeBuildTarget.log" \
-  -projectPath "$UNITY_PROJECT_PATH" \
-  -buildTarget Android \
-  -batchmode \
-  -nographics \
-  -quit
+# echo ""
+# echo "###########################"
+# echo "#   Change Build Target   #"
+# echo "###########################"
+# echo ""
+# /opt/unity/Editor/Unity \
+#   -logFile "$FULL_ARTIFACTS_PATH/changeBuildTarget.log" \
+#   -projectPath "$UNITY_PROJECT_PATH" \
+#   -buildTarget Android \
+#   -batchmode \
+#   -nographics \
+#   -quit
   
 # Print unity log output
-cat "$FULL_ARTIFACTS_PATH/changeBuildTarget.log"
+# cat "$FULL_ARTIFACTS_PATH/changeBuildTarget.log"
 
-echo ""
-echo "###########################"
-echo "Change Build Target Completed"
-echo "###########################"
-echo ""
+# echo ""
+# echo "###########################"
+# echo "Change Build Target Completed"
+# echo "###########################"
+# echo ""
 
 #
 # Testing in EditMode
@@ -135,6 +135,7 @@ if [ $PLAY_MODE = true ]; then
   echo "###########################"
   echo ""
   unity-editor \
+    -buildTarget Android
     -batchmode \
     -logFile "$FULL_ARTIFACTS_PATH/playmode.log" \
     -projectPath "$UNITY_PROJECT_PATH" \
