@@ -70,7 +70,7 @@ echo "###########################"
 echo "#   Change Build Target   #"
 echo "###########################"
 echo ""
-unity-editor \
+/opt/unity/Editor/Unity \
   -logFile "$FULL_ARTIFACTS_PATH/changeBuildTarget.log" \
   -projectPath "$UNITY_PROJECT_PATH" \
   -buildTarget Android \
@@ -96,7 +96,7 @@ if [ $EDIT_MODE = true ]; then
   echo "###########################"
   echo ""
   unity-editor \
-    -batchmode \
+    -buildTarget Android
     -logFile "$FULL_ARTIFACTS_PATH/editmode.log" \
     -projectPath "$UNITY_PROJECT_PATH" \
     -runTests \
